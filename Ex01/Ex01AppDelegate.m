@@ -20,6 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message Box"
+                                                    message:@"Hello World"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok, Bye"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
+    [alert release];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
